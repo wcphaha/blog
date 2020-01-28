@@ -6,12 +6,12 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>Tag: HEXO | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="�¹ʶ�֪��">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/HEXO/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="�¹ʶ�֪��">
 <meta property="og:locale" content="en_US">
@@ -164,188 +164,34 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-如何使用Typora写-md文件-图片路径问题-hexo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/">如何使用Typora写Markdown文件|图片路径问题|hexo</a>
-    </h1>
-  
-
-        
-        <a href="/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/" class="archive-article-date">
-  	<time datetime="2020-01-26T11:38:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-26</time>
-</a>
-        
-      </header>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>typora-copy-images-to: 如何使用Typora写Markdown文件|图片路径问题|hexo </p>
-<blockquote>
-<p>这篇博客主要讲解hexo创建新的博客以及使用Markdown工具Typora编写博客和解决博客部署之后不能加载图片的问题</p>
-</blockquote>
-<h2 id="搭建博客项目"><a href="#搭建博客项目" class="headerlink" title="搭建博客项目"></a>搭建博客项目</h2><p>首先先搭建一个初始的博客项目，参考<a href="[https://www.wcpha.club/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/](https://www.wcpha.club/2020/01/26/个人博客搭建-hexo/)">这篇文章</a></p>
-<h2 id="使用typora编辑器"><a href="#使用typora编辑器" class="headerlink" title="使用typora编辑器"></a>使用typora编辑器</h2><p><a href="https://www.typora.io/" target="_blank" rel="noopener">点击这里</a>进入官网下载</p>
-<p><img src="/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/image-20200126194530565.png" alt="image-20200126194530565"></p>
-<p>下载自己电脑的对应版本，完成安装即可使用</p>
-<p>typora是一个用于编写Markdown文件的专用编辑器，在编辑的时候既可以使用Markdown语法也可以像word一样使用软件自带功能完成页面排版，编写界面就像下面这样，简单好用</p>
-<p><img src="/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/image-20200126194843762.png" alt="image-20200126194843762"></p>
-<p>如果想学习Markdown语法可以<a href="https://www.runoob.com/markdown/md-tutorial.html" target="_blank" rel="noopener">点击这里</a></p>
-<h2 id="解决图片路径问题"><a href="#解决图片路径问题" class="headerlink" title="解决图片路径问题"></a>解决图片路径问题</h2><blockquote>
-<p>可能大家有时候会遇到这样的情况：在.md文件中插入了图片却在网页中加载不出来</p>
-</blockquote>
-<p>首先找到项目主文件夹下面的_config.yml文件，修改选项post_asset_folder:false，将false改为true</p>
-<p><img src="/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/image-20200126195635496.png" alt="image-20200126195635496"></p>
-<p>然后使用npm或cnpm下载插件：<strong>hexo-asset-image</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install https:&#x2F;&#x2F;github.com&#x2F;CodeFalling&#x2F;hexo-asset-image --save</span><br></pre></td></tr></table></figure>
-
-<p>下载完成之后，使用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;文件名&quot;</span><br></pre></td></tr></table></figure>
-
-<p>创建新的博客文件后，打开放博客文件的文件夹会发现同时生成了同名的文件夹用于存放图片，像下面这样</p>
-<p><img src="/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/image-20200126200252929.png" alt="image-20200126200252929"></p>
-<p>接下来编写博客的时候只需要将图片放到同名的文件夹下面就可以在.md文件中引用了</p>
-<h2 id="截图路径问题"><a href="#截图路径问题" class="headerlink" title="截图路径问题"></a>截图路径问题</h2><blockquote>
-<p>有的同学会发现一个问题：发博客的时候会大量的使用截屏如QQ截屏，把截下来的图片还要保存到特定的文件夹中，再去引用很麻烦。这时候就可以用typora来解决这个烦恼了</p>
-</blockquote>
-<p>在使用typora编辑博客的时候可以直接将截图粘贴到文档上面，但是要注意的是，没有经过配置的typora会将图片存储到一个固定的位置C:\Users\DELL\AppData\Roaming\Typora\typora-user-images（我的电脑是这里），而不是上面所说的同名文件夹内，要进行下面的设置</p>
-<p><img src="/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/image-20200126201306375.png" alt="image-20200126201306375"></p>
-<p>选择偏好设置</p>
-<p><img src="/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/image-20200126203352661.png" alt="image-20200126203352661"></p>
-<p>选择图像进行上面的配置</p>
-<p>配置好之后截图粘贴到typora上面，图片就会自动存储到同名的文件夹下面</p>
-<p>这样既可以使用typora编辑博客啦！</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
+    
       
       
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
-    <article id="post-个人博客搭建-hexo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+        <div class="archives">
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/">个人博客搭建|hexo</a>
-    </h1>
-  
-
-        
-        <a href="/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/" class="archive-article-date">
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/" class="archive-article-date">
   	<time datetime="2020-01-26T02:06:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-26</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>将此篇博客作为新的博客地址的第一篇，主要分享了怎样通过hexo 搭建个人博客网站（Windows平台），以及怎样将博客网站托管到GitHub或者服务器上便于其他用户远程访问</p>
-</blockquote>
-<h2 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a><a href="https://hexo.io/" target="_blank" rel="noopener">hexo</a></h2><ul>
-<li>hexo是一个能快速搭建自己的博客网站的博客框架，有大量的博客界面主题  </li>
-<li>hexo采用Markdown解析文章  </li>
-</ul>
-<h2 id="配置所需软件"><a href="#配置所需软件" class="headerlink" title="配置所需软件"></a>配置所需软件</h2><ul>
-<li>git( github 账号)</li>
-<li>node</li>
-</ul>
-<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="安装node"><a href="#安装node" class="headerlink" title="安装node"></a>安装node</h3><p>点击<a href="http://nodejs.cn/" target="_blank" rel="noopener">这个</a>首页是这样</p>
-<p><img src="/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/image-20200123204218449.png" alt="image-20200123204218449"></p>
-<p>进入下载页面选择自己的版本</p>
-<p><img src="/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/image-20200123204303580.png" alt="image-20200123204303580"></p>
-<p>下载好了之后点击安装包照常安装，安装好了之后打开控制台输入node命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/">个人博客搭建|hexo</a>
+    </h1>
+  
 
-<p><img src="/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/image-20200123211255456.png" alt="image-20200123211255456"></p>
-<p>像上面一样显示对应版本号，表示安装完成，安装node同时会自动安装npm</p>
-<h3 id="安装配置git"><a href="#安装配置git" class="headerlink" title="安装配置git"></a>安装配置git</h3><p>参考<a href="https://www.cnblogs.com/wj-1314/p/7993819.html" target="_blank" rel="noopener">这里</a></p>
-<h3 id="下载cnpm"><a href="#下载cnpm" class="headerlink" title="下载cnpm"></a>下载cnpm</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-<p>这个安装过程一般长时间没反应，耐心等待</p>
-<p>安装好之后同样可以使用下面的代码查看</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm -v</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/image-20200124195625126.png" alt="image-20200124195625126"></p>
-<h3 id="安装hexo-cli"><a href="#安装hexo-cli" class="headerlink" title="安装hexo-cli"></a>安装hexo-cli</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<p>查看版本号</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/image-20200124200200620.png" alt="image-20200124200200620"></p>
-<h3 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h3><p>创建文件夹blog（文件夹名字任意），并cd进入该文件夹</p>
-<p>创建博客项目</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/image-20200124202653542.png" alt="image-20200124202653542"></p>
-<p>这时候看一下文件夹下生成了哪些东西</p>
-<p><img src="/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/image-20200124202937664.png" alt="image-20200124202937664"></p>
-<p>补充安装：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hexo --save</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/image-20200124203533467.png" alt="image-20200124203533467"></p>
-<p>开启博客服务</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
-<p>如果没有运行上面指令显示没有该指令，就安装hexo-server，再执行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hexo-server</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/image-20200124204940197.png" alt="image-20200124204940197"></p>
-<p>成功之后如上图，进入<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></p>
-<p><img src="/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/image-20200126094552887.png" alt="image-20200126094552887"></p>
-<p>这样就成功搭建起一个简单的个人博客了</p>
-<p>后面有时间会讲解怎样<strong>将博客页面部署到服务器或者是GitHub</strong>上面，实现非本地访问，以及怎样<strong>编辑发表博客文章和修改博客页面主题</strong></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -357,42 +203,19 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
   
   
+    </div></section>
+  
+
+    
 
 
           </div>
@@ -414,10 +237,10 @@
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: true,
+		isHome: false,
 		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
