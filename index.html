@@ -160,6 +160,94 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-原生安卓使用URL加载图片" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/25/%E5%8E%9F%E7%94%9F%E5%AE%89%E5%8D%93%E4%BD%BF%E7%94%A8URL%E5%8A%A0%E8%BD%BD%E5%9B%BE%E7%89%87/">原生安卓如何怎么使用URL加载图片</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/25/%E5%8E%9F%E7%94%9F%E5%AE%89%E5%8D%93%E4%BD%BF%E7%94%A8URL%E5%8A%A0%E8%BD%BD%E5%9B%BE%E7%89%87/" class="archive-article-date">
+  	<time datetime="2020-02-25T15:58:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>最近接触原生java安卓开发，学习了一些基本的布局以常用的组件，发现原生的Java安卓开发中ImageView组件无法使用URL加载图片资源，基于业务逻辑考虑，很多时候从服务端传来的JSON数据图片都是URL字符串。例如实现APP登录之后使用后台传输的URL加载用户头像的功能用基础方法就比较难实现。</p>
+<p>因此这里介绍一个好用的库来满足设计需求</p>
+</blockquote>
+<h3 id="下载库文件"><a href="#下载库文件" class="headerlink" title="下载库文件"></a>下载库文件</h3><p><a href="https://github.com/bumptech/glide/releases/download/v4.7.0/glide-full-4.7.0.jar" target="_blank" rel="noopener">点击这里</a>下载库文件，将下载好的文件复制到项目中具体module/lib文件夹下面，如下图所示（需要将项目设为project显示模式）</p>
+<p><img src="/2020/02/25/%E5%8E%9F%E7%94%9F%E5%AE%89%E5%8D%93%E4%BD%BF%E7%94%A8URL%E5%8A%A0%E8%BD%BD%E5%9B%BE%E7%89%87/image-20200226001214360.png" alt="image-20200226001214360"></p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h5 id="在布局文件XML中创建一个ImageView组件"><a href="#在布局文件XML中创建一个ImageView组件" class="headerlink" title="在布局文件XML中创建一个ImageView组件"></a>在布局文件XML中创建一个ImageView组件</h5><p><img src="/2020/02/25/%E5%8E%9F%E7%94%9F%E5%AE%89%E5%8D%93%E4%BD%BF%E7%94%A8URL%E5%8A%A0%E8%BD%BD%E5%9B%BE%E7%89%87/image-20200226001613613.png" alt="image-20200226001613613"></p>
+<h5 id="java代码中先引入包"><a href="#java代码中先引入包" class="headerlink" title="java代码中先引入包"></a>java代码中先引入包</h5><p><img src="/2020/02/25/%E5%8E%9F%E7%94%9F%E5%AE%89%E5%8D%93%E4%BD%BF%E7%94%A8URL%E5%8A%A0%E8%BD%BD%E5%9B%BE%E7%89%87/image-20200226001421437.png" alt="image-20200226001421437"></p>
+<h5 id="使用库中提供的方法"><a href="#使用库中提供的方法" class="headerlink" title="使用库中提供的方法"></a>使用库中提供的方法</h5><p>先通过id实例化ImageView组件，然后使用Glide.with(this).load(“对应URL”).into(对应组件)</p>
+<p><img src="/2020/02/25/%E5%8E%9F%E7%94%9F%E5%AE%89%E5%8D%93%E4%BD%BF%E7%94%A8URL%E5%8A%A0%E8%BD%BD%E5%9B%BE%E7%89%87/image-20200226001817398.png" alt="image-20200226001817398"></p>
+<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>手机调试运行结果</p>
+<img src="/2020/02/25/%E5%8E%9F%E7%94%9F%E5%AE%89%E5%8D%93%E4%BD%BF%E7%94%A8URL%E5%8A%A0%E8%BD%BD%E5%9B%BE%E7%89%87/Screenshot_20200226-002146.jpg" alt="Screenshot_20200226-002146.jpg" style="zoom: 25%;">
+
+<p>这样就成功让ImageView使用URL展示图片啦</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/25/%E5%8E%9F%E7%94%9F%E5%AE%89%E5%8D%93%E4%BD%BF%E7%94%A8URL%E5%8A%A0%E8%BD%BD%E5%9B%BE%E7%89%87/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
     <article id="post-安装Android-studio" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -669,15 +757,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Android</a>
               </li>
             
             <div class="clearfix"></div>
