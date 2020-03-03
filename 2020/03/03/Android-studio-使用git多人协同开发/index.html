@@ -6,28 +6,37 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>如何使用Typora写Markdown文件|图片路径问题|hexo | Hexo</title>
+  <title>Android studio 使用git多人协同开发 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="typora-copy-images-to: 如何使用Typora写Markdown文件|图片路径问题|hexo   这篇博客主要讲解hexo创建新的博客以及使用Markdown工具Typora编写博客和解决博客部署之后不能加载图片的问题  搭建博客项目首先先搭建一个初始的博客项目，参考这篇文章 使用typora编辑器点击这里进入官网下载  下载自己电脑的对应版本，完成安装即可使用 typora是">
+  <meta name="description" content="博客前提是安装并且配置好了GIT  新建项目仓库  新建一个放项目文件的仓库  在本地新建一个安卓项目P1 配置远程GIT     将github仓库地址复制到这里    先将项目文件提交到github，点击Commit选择要上传的文件    第一次将所有的文件，包括配置文件都上传上去    忽略警告     选择push，将文件推到github上    去github查看，已经可以上传成功，到">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何使用Typora写Markdown文件|图片路径问题|hexo">
-<meta property="og:url" content="http://yoursite.com/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/index.html">
+<meta property="og:title" content="Android studio 使用git多人协同开发">
+<meta property="og:url" content="http://yoursite.com/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="typora-copy-images-to: 如何使用Typora写Markdown文件|图片路径问题|hexo   这篇博客主要讲解hexo创建新的博客以及使用Markdown工具Typora编写博客和解决博客部署之后不能加载图片的问题  搭建博客项目首先先搭建一个初始的博客项目，参考这篇文章 使用typora编辑器点击这里进入官网下载  下载自己电脑的对应版本，完成安装即可使用 typora是">
+<meta property="og:description" content="博客前提是安装并且配置好了GIT  新建项目仓库  新建一个放项目文件的仓库  在本地新建一个安卓项目P1 配置远程GIT     将github仓库地址复制到这里    先将项目文件提交到github，点击Commit选择要上传的文件    第一次将所有的文件，包括配置文件都上传上去    忽略警告     选择push，将文件推到github上    去github查看，已经可以上传成功，到">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/image-20200126194530565.png">
-<meta property="og:image" content="http://yoursite.com/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/image-20200126194843762.png">
-<meta property="og:image" content="http://yoursite.com/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/image-20200126195635496.png">
-<meta property="og:image" content="http://yoursite.com/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/image-20200126200252929.png">
-<meta property="og:image" content="http://yoursite.com/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/image-20200126201306375.png">
-<meta property="og:image" content="http://yoursite.com/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/image-20200126203352661.png">
-<meta property="article:published_time" content="2020-01-26T11:38:51.000Z">
-<meta property="article:modified_time" content="2020-01-31T09:35:41.665Z">
+<meta property="og:image" content="http://yoursite.com/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303122041106.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123211672.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123255462.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123311358.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123715881.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123835376.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123910054.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123958747.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303124112102.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303124257588.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303124323586.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303124423163.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303124506727.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303124608343.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303125930499.png">
+<meta property="article:published_time" content="2020-03-03T04:17:57.000Z">
+<meta property="article:modified_time" content="2020-03-03T05:11:21.075Z">
 <meta property="article:author" content="Wcphaha">
-<meta property="article:tag" content="hexo">
-<meta property="article:tag" content="markdown">
+<meta property="article:tag" content="Android">
+<meta property="article:tag" content="git">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/image-20200126194530565.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303122041106.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -169,61 +178,75 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-如何使用Typora写-md文件-图片路径问题-hexo" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Android-studio-使用git多人协同开发" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      如何使用Typora写Markdown文件|图片路径问题|hexo
+      Android studio 使用git多人协同开发
     </h1>
   
 
         
-        <a href="/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/" class="archive-article-date">
-  	<time datetime="2020-01-26T11:38:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-26</time>
+        <a href="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/" class="archive-article-date">
+  	<time datetime="2020-03-03T04:17:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>typora-copy-images-to: 如何使用Typora写Markdown文件|图片路径问题|hexo </p>
+        <blockquote>
+<p>博客前提是安装并且配置好了GIT</p>
+</blockquote>
+<h2 id="新建项目仓库"><a href="#新建项目仓库" class="headerlink" title="新建项目仓库"></a>新建项目仓库</h2><p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303122041106.png" alt="image-20200303122041106"></p>
 <blockquote>
-<p>这篇博客主要讲解hexo创建新的博客以及使用Markdown工具Typora编写博客和解决博客部署之后不能加载图片的问题</p>
+<p>新建一个放项目文件的仓库</p>
 </blockquote>
-<h2 id="搭建博客项目"><a href="#搭建博客项目" class="headerlink" title="搭建博客项目"></a>搭建博客项目</h2><p>首先先搭建一个初始的博客项目，参考<a href="[https://www.wcpha.club/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/](https://www.wcpha.club/2020/01/26/个人博客搭建-hexo/)">这篇文章</a></p>
-<h2 id="使用typora编辑器"><a href="#使用typora编辑器" class="headerlink" title="使用typora编辑器"></a>使用typora编辑器</h2><p><a href="https://www.typora.io/" target="_blank" rel="noopener">点击这里</a>进入官网下载</p>
-<p><img src="/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/image-20200126194530565.png" alt="image-20200126194530565"></p>
-<p>下载自己电脑的对应版本，完成安装即可使用</p>
-<p>typora是一个用于编写Markdown文件的专用编辑器，在编辑的时候既可以使用Markdown语法也可以像word一样使用软件自带功能完成页面排版，编写界面就像下面这样，简单好用</p>
-<p><img src="/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/image-20200126194843762.png" alt="image-20200126194843762"></p>
-<p>如果想学习Markdown语法可以<a href="https://www.runoob.com/markdown/md-tutorial.html" target="_blank" rel="noopener">点击这里</a></p>
-<h2 id="解决图片路径问题"><a href="#解决图片路径问题" class="headerlink" title="解决图片路径问题"></a>解决图片路径问题</h2><blockquote>
-<p>可能大家有时候会遇到这样的情况：在.md文件中插入了图片却在网页中加载不出来</p>
+<h2 id="在本地新建一个安卓项目P1"><a href="#在本地新建一个安卓项目P1" class="headerlink" title="在本地新建一个安卓项目P1"></a>在本地新建一个安卓项目P1</h2><p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123211672.png" alt="image-20200303123211672"></p>
+<h4 id="配置远程GIT"><a href="#配置远程GIT" class="headerlink" title="配置远程GIT"></a>配置远程GIT</h4><p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123255462.png" alt="image-20200303123255462"></p>
+<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123311358.png" alt="image-20200303123311358"></p>
+<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123715881.png" alt="image-20200303123715881"></p>
+<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123835376.png" alt="image-20200303123835376"></p>
+<blockquote>
+<p>将github仓库地址复制到这里</p>
 </blockquote>
-<p>首先找到项目主文件夹下面的_config.yml文件，修改选项post_asset_folder:false，将false改为true</p>
-<p><img src="/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/image-20200126195635496.png" alt="image-20200126195635496"></p>
-<p>然后使用npm或cnpm下载插件：<strong>hexo-asset-image</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install https:&#x2F;&#x2F;github.com&#x2F;CodeFalling&#x2F;hexo-asset-image --save</span><br></pre></td></tr></table></figure>
-
-<p>下载完成之后，使用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;文件名&quot;</span><br></pre></td></tr></table></figure>
-
-<p>创建新的博客文件后，打开放博客文件的文件夹会发现同时生成了同名的文件夹用于存放图片，像下面这样</p>
-<p><img src="/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/image-20200126200252929.png" alt="image-20200126200252929"></p>
-<p>接下来编写博客的时候只需要将图片放到同名的文件夹下面就可以在.md文件中引用了</p>
-<h2 id="截图路径问题"><a href="#截图路径问题" class="headerlink" title="截图路径问题"></a>截图路径问题</h2><blockquote>
-<p>有的同学会发现一个问题：发博客的时候会大量的使用截屏如QQ截屏，把截下来的图片还要保存到特定的文件夹中，再去引用很麻烦。这时候就可以用typora来解决这个烦恼了</p>
+<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123910054.png" alt="image-20200303123910054"></p>
+<blockquote>
+<p>先将项目文件提交到github，点击Commit选择要上传的文件</p>
 </blockquote>
-<p>在使用typora编辑博客的时候可以直接将截图粘贴到文档上面，但是要注意的是，没有经过配置的typora会将图片存储到一个固定的位置C:\Users\DELL\AppData\Roaming\Typora\typora-user-images（我的电脑是这里），而不是上面所说的同名文件夹内，要进行下面的设置</p>
-<p><img src="/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/image-20200126201306375.png" alt="image-20200126201306375"></p>
-<p>选择偏好设置</p>
-<p><img src="/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/image-20200126203352661.png" alt="image-20200126203352661"></p>
-<p>选择图像进行上面的配置</p>
-<p>配置好之后截图粘贴到typora上面，图片就会自动存储到同名的文件夹下面</p>
-<p>这样就可以使用typora编辑博客啦！</p>
+<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123958747.png" alt="image-20200303123958747"></p>
+<blockquote>
+<p>第一次将所有的文件，包括配置文件都上传上去</p>
+</blockquote>
+<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303124112102.png" alt="image-20200303124112102"></p>
+<blockquote>
+<p>忽略警告</p>
+</blockquote>
+<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303124257588.png" alt="image-20200303124257588"></p>
+<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303124323586.png" alt="image-20200303124323586"></p>
+<blockquote>
+<p>选择push，将文件推到github上</p>
+</blockquote>
+<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303124423163.png" alt="image-20200303124423163"></p>
+<blockquote>
+<p>去github查看，已经可以上传成功，到这里已经全部完成了</p>
+</blockquote>
+<h2 id="其他开发者操作"><a href="#其他开发者操作" class="headerlink" title="其他开发者操作"></a>其他开发者操作</h2><blockquote>
+<p>上面已经将仓库建好了，其他开发者只需要从github拉取项目到本地就可以了</p>
+<p>修改了代码之后，只需要像上面一样，先选择要Commit的文件（也就是改了代码的文件或新增的文件），再push到远端仓库就可以了，其他用户再次开发的时候点击pull拉取下来，就可以继续开发了</p>
+</blockquote>
+<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303124506727.png" alt="image-20200303124506727"></p>
+<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303124608343.png" alt="image-20200303124608343"></p>
+<blockquote>
+<p>第一次创建新项目像上面这样</p>
+<p>之后打开此项目，先将最新版的代码拉取下来就行了</p>
+</blockquote>
+<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303125930499.png" alt="image-20200303125930499"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>多人协同开发，使用GIT是非常有用的，他能将不同用户上传或修改的代码合并，不用每次编写代码的时候都先复制其他开发者的代码到本地。</p>
+<p>每次编写完代码之后直接提交到远端仓库，git会自动进行项目代码管理，其他开发者要编写代码只需要拉取下来就可以在最新版代码的基础上继续编写了。</p>
 
       
 
@@ -263,11 +286,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">markdown</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
         		</li>
       		
 		</ul>
@@ -323,7 +346,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -337,18 +360,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          安装Android studio、配置中文、常见报错解决方法
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">个人博客搭建|hexo</div>
+    <a href="/2020/02/27/%E5%AE%89%E5%8D%93%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8EJSON%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%BD%AC%E5%8C%96/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">安卓发送请求及字符串与JSON对象的转化</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -375,7 +389,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#搭建博客项目"><span class="toc-number">1.</span> <span class="toc-text">搭建博客项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用typora编辑器"><span class="toc-number">2.</span> <span class="toc-text">使用typora编辑器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决图片路径问题"><span class="toc-number">3.</span> <span class="toc-text">解决图片路径问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#截图路径问题"><span class="toc-number">4.</span> <span class="toc-text">截图路径问题</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#新建项目仓库"><span class="toc-number">1.</span> <span class="toc-text">新建项目仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在本地新建一个安卓项目P1"><span class="toc-number">2.</span> <span class="toc-text">在本地新建一个安卓项目P1</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#配置远程GIT"><span class="toc-number">2.0.1.</span> <span class="toc-text">配置远程GIT</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他开发者操作"><span class="toc-number">3.</span> <span class="toc-text">其他开发者操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li></ol>
                     </div>
                 </span>
             </div>

@@ -160,6 +160,244 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Android-studio-使用git多人协同开发" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/">Android studio 使用git多人协同开发</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/" class="archive-article-date">
+  	<time datetime="2020-03-03T04:17:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>博客前提是安装并且配置好了GIT</p>
+</blockquote>
+<h2 id="新建项目仓库"><a href="#新建项目仓库" class="headerlink" title="新建项目仓库"></a>新建项目仓库</h2><p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303122041106.png" alt="image-20200303122041106"></p>
+<blockquote>
+<p>新建一个放项目文件的仓库</p>
+</blockquote>
+<h2 id="在本地新建一个安卓项目P1"><a href="#在本地新建一个安卓项目P1" class="headerlink" title="在本地新建一个安卓项目P1"></a>在本地新建一个安卓项目P1</h2><p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123211672.png" alt="image-20200303123211672"></p>
+<h4 id="配置远程GIT"><a href="#配置远程GIT" class="headerlink" title="配置远程GIT"></a>配置远程GIT</h4><p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123255462.png" alt="image-20200303123255462"></p>
+<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123311358.png" alt="image-20200303123311358"></p>
+<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123715881.png" alt="image-20200303123715881"></p>
+<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123835376.png" alt="image-20200303123835376"></p>
+<blockquote>
+<p>将github仓库地址复制到这里</p>
+</blockquote>
+<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123910054.png" alt="image-20200303123910054"></p>
+<blockquote>
+<p>先将项目文件提交到github，点击Commit选择要上传的文件</p>
+</blockquote>
+<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123958747.png" alt="image-20200303123958747"></p>
+<blockquote>
+<p>第一次将所有的文件，包括配置文件都上传上去</p>
+</blockquote>
+<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303124112102.png" alt="image-20200303124112102"></p>
+<blockquote>
+<p>忽略警告</p>
+</blockquote>
+<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303124257588.png" alt="image-20200303124257588"></p>
+<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303124323586.png" alt="image-20200303124323586"></p>
+<blockquote>
+<p>选择push，将文件推到github上</p>
+</blockquote>
+<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303124423163.png" alt="image-20200303124423163"></p>
+<blockquote>
+<p>去github查看，已经可以上传成功，到这里已经全部完成了</p>
+</blockquote>
+<h2 id="其他开发者操作"><a href="#其他开发者操作" class="headerlink" title="其他开发者操作"></a>其他开发者操作</h2><blockquote>
+<p>上面已经将仓库建好了，其他开发者只需要从github拉取项目到本地就可以了</p>
+<p>修改了代码之后，只需要像上面一样，先选择要Commit的文件（也就是改了代码的文件或新增的文件），再push到远端仓库就可以了，其他用户再次开发的时候点击pull拉取下来，就可以继续开发了</p>
+</blockquote>
+<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303124506727.png" alt="image-20200303124506727"></p>
+<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303124608343.png" alt="image-20200303124608343"></p>
+<blockquote>
+<p>第一次创建新项目像上面这样</p>
+<p>之后打开此项目，先将最新版的代码拉取下来就行了</p>
+</blockquote>
+<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303125930499.png" alt="image-20200303125930499"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>多人协同开发，使用GIT是非常有用的，他能将不同用户上传或修改的代码合并，不用每次编写代码的时候都先复制其他开发者的代码到本地。</p>
+<p>每次编写完代码之后直接提交到远端仓库，git会自动进行项目代码管理，其他开发者要编写代码只需要拉取下来就可以在最新版代码的基础上继续编写了。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
+    <article id="post-安卓发送请求及字符串与JSON对象的转化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/27/%E5%AE%89%E5%8D%93%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8EJSON%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%BD%AC%E5%8C%96/">安卓发送请求及字符串与JSON对象的转化</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/27/%E5%AE%89%E5%8D%93%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8EJSON%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%BD%AC%E5%8C%96/" class="archive-article-date">
+  	<time datetime="2020-02-27T14:30:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="HTTP请求"><a href="#HTTP请求" class="headerlink" title="HTTP请求"></a>HTTP请求</h2><blockquote>
+<p>首先，引入一个HTTP库 “Volley”，这是谷歌发布的HTTP库，详细信息可以<a href="https://developer.android.com/training/volley" target="_blank" rel="noopener">点击这里</a>看</p>
+</blockquote>
+<h4 id="引入volley"><a href="#引入volley" class="headerlink" title="引入volley"></a>引入volley</h4><p>在项目build.gradle 中的 dependencies 引入依赖</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">implementation <span class="string">'com.android.volley:volley:1.1.1'</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><h6 id="创建一个请求队列对象"><a href="#创建一个请求队列对象" class="headerlink" title="创建一个请求队列对象"></a>创建一个请求队列对象</h6><p>这里拿到的RequestQueue是一个请求队列对象，它可以缓存所有的HTTP请求，然后按照一定的算法并发地发出这些请求。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RequestQueue mQueue = Volley.newRequestQueue(<span class="keyword">this</span>);</span><br></pre></td></tr></table></figure>
+
+<h6 id="创建请求对象StringRequest"><a href="#创建请求对象StringRequest" class="headerlink" title="创建请求对象StringRequest"></a>创建请求对象StringRequest</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">StringRequest stringRequest = <span class="keyword">new</span> StringRequest(</span><br><span class="line">                <span class="string">"https://jsonplaceholder.typicode.com/posts/1"</span>,<span class="comment">//参数1</span></span><br><span class="line">                <span class="keyword">new</span> Response.Listener&lt;String&gt;() &#123;<span class="comment">//参数2</span></span><br><span class="line">                    <span class="meta">@Override</span></span><br><span class="line">                    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onResponse</span><span class="params">(String response)</span> </span>&#123;</span><br><span class="line">                        text.setText(response);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="keyword">new</span> Response.ErrorListener() &#123;<span class="comment">//参数3</span></span><br><span class="line">                    <span class="meta">@Override</span></span><br><span class="line">                    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onErrorResponse</span><span class="params">(VolleyError error)</span> </span>&#123;</span><br><span class="line"><span class="comment">//                        Log.e("TAG", error.getMessage(), error);</span></span><br><span class="line">                        text.setText(error.getMessage());</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                );</span><br></pre></td></tr></table></figure>
+
+<p>StringRequest的构造函数有三个参数，分别是请求的URL和两个回调函数，其中onResponse是请求成功执行，参数response是返回的响应数据</p>
+<h6 id="将对象加入请求队列"><a href="#将对象加入请求队列" class="headerlink" title="将对象加入请求队列"></a>将对象加入请求队列</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mQueue.add(stringRequest);</span><br></pre></td></tr></table></figure>
+
+<h6 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h6><p>较高的安卓版本貌似不支持HTTP，只能使用https地址</p>
+<h2 id="字符串转换成JSON对象"><a href="#字符串转换成JSON对象" class="headerlink" title="字符串转换成JSON对象"></a>字符串转换成JSON对象</h2><h4 id="引入jar包"><a href="#引入jar包" class="headerlink" title="引入jar包"></a>引入jar包</h4><p>在build.gradle文件中的dependencies中添加</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">implementation <span class="string">'com.alibaba:fastjson:1.2.9'</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="请求一段JSON字符串"><a href="#请求一段JSON字符串" class="headerlink" title="请求一段JSON字符串"></a>请求一段JSON字符串</h4><p>使用上面的volley，请求一段JSON数据，这是<a href="https://jsonplaceholder.typicode.com/posts/1" target="_blank" rel="noopener">请求地址</a>。</p>
+<p><img src="/2020/02/27/%E5%AE%89%E5%8D%93%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8EJSON%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%BD%AC%E5%8C%96/image-20200227230947382.png" alt="image-20200227230947382"></p>
+<h4 id="转化"><a href="#转化" class="headerlink" title="转化"></a>转化</h4><p>请求的JSON数据会自动转化成JSON字符串</p>
+<h6 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import com.alibaba.fastjson.JSONObject;</span><br></pre></td></tr></table></figure>
+
+<h6 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">JSONObject json &#x3D; JSONObject.parseObject(response);&#x2F;&#x2F;转化成JOSN</span><br><span class="line">text.setText(json.getString(&quot;body&quot;));&#x2F;&#x2F;通过key获取JOSN值</span><br></pre></td></tr></table></figure>
+
+<p>完整代码↓</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">StringRequest stringRequest &#x3D; new StringRequest(</span><br><span class="line">                &quot;https:&#x2F;&#x2F;jsonplaceholder.typicode.com&#x2F;posts&#x2F;1&quot;,</span><br><span class="line">                new Response.Listener&lt;String&gt;() &#123;</span><br><span class="line">                    @Override</span><br><span class="line">                    public void onResponse(String response) &#123;</span><br><span class="line">                        JSONObject json &#x3D; JSONObject.parseObject(response);</span><br><span class="line">                        text.setText(json.getString(&quot;body&quot;));</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;,</span><br><span class="line">                new Response.ErrorListener() &#123;</span><br><span class="line">                    @Override</span><br><span class="line">                    public void onErrorResponse(VolleyError error) &#123;</span><br><span class="line">                        text.setText(error.getMessage());</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                );</span><br></pre></td></tr></table></figure>
+
+<p>在之前，我已经创建了一个空白TextView组件，将转换之后的数据展示在上面，检验是否成功将字符串转化成JSON对象，通过key检验是否得到对应的值</p>
+<h4 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h4><p>成功将body展示到界面上</p>
+<img src="/2020/02/27/%E5%AE%89%E5%8D%93%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8EJSON%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%BD%AC%E5%8C%96/QQ图片20200227230806.jpg" style="zoom:25%;">
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>发送HTTP请求和JOSN数据的处理是和后台数据交互的关键</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JOSN</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/27/%E5%AE%89%E5%8D%93%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8EJSON%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%BD%AC%E5%8C%96/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
     <article id="post-原生安卓使用URL加载图片" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -761,7 +999,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">JOSN</a>
               </li>
              
               <li class="article-tag-list-item">
