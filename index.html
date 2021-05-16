@@ -5,13 +5,13 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="https://wcphaha.github.io">
+  <link rel="dns-prefetch" href="https://wcphaha.github.io/blog">
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="�¹ʶ�֪��">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://wcphaha.github.io/index.html">
+<meta property="og:url" content="https://wcphaha.github.io/blog/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="�¹ʶ�֪��">
 <meta property="og:locale" content="en_US">
@@ -190,7 +190,7 @@
 <h5 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">"express"</span>)<span class="comment">//引入包</span></span><br><span class="line"><span class="keyword">const</span> app = express()</span><br><span class="line"></span><br><span class="line"><span class="comment">//get请求</span></span><br><span class="line">app.get(<span class="string">'/'</span>, (req, res, next) =&gt; &#123;</span><br><span class="line">    res.send(&#123;</span><br><span class="line">        name:<span class="string">"小明"</span>，</span><br><span class="line">        number:<span class="string">"100"</span></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//开启服务，代理9000端口</span></span><br><span class="line"><span class="keyword">var</span> server = app.listen(<span class="number">9000</span>, () =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"祝你好运..."</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <p>打开浏览器</p>
-<p><img src="/2020/04/08/node-%E7%88%AC%E8%99%AB-%E7%9B%B8%E5%85%B3%E5%8C%85-%E5%9F%BA%E7%A1%80/image-20200409114106292.png" alt="image-20200409114106292"></p>
+<p><img src="/blog/2020/04/08/node-%E7%88%AC%E8%99%AB-%E7%9B%B8%E5%85%B3%E5%8C%85-%E5%9F%BA%E7%A1%80/image-20200409114106292.png" alt="image-20200409114106292"></p>
 <p>我的浏览器安装了Chrome插件：<a href="https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc" target="_blank" rel="noopener">JSONView</a>，可以将网页的JSON格式字符串以格式化的JSON显示，就像上面这样，看起来更加清晰</p>
 <h3 id="cheerio"><a href="#cheerio" class="headerlink" title="cheerio"></a>cheerio</h3><p>爬取数据的过程中，得到网页的HTML代码，我们需要解析DOM，而node本身并没有DOM操作，引入cheerio库可以帮我们简单的操作DOM，cheerio实际上实现了jQuery的部分语法功能，操作DOM的时候和jQuery是几乎一样的，不过cheerio智能获取解析DOM得到数据，不能操作DOM事件，比如点击事件。</p>
 <p>安装</p>
@@ -203,33 +203,33 @@
 <h3 id="excel-export"><a href="#excel-export" class="headerlink" title="excel-export"></a>excel-export</h3><p>excel-export是一个node打开，生成Excel表格的库，在爬取数据的时候，如果要保存数据，使用这个库可以将其保存为Excel文件</p>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>爬取网页数据的时候，如果是静态网页，使用superagent+cheerio得到网页文件，操作DOM</p>
 <p>如果是动态加载的网页，使用nightmare或nightmare+cheerio</p>
-<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><h3 id="1-爬取百度新闻"><a href="#1-爬取百度新闻" class="headerlink" title="1.爬取百度新闻"></a>1.爬取<a href="https://news.baidu.com/" target="_blank" rel="noopener">百度新闻</a></h3><h5 id="观察网页DOM结构，确定要爬取的数据所在位置（我们爬取左边的新闻列表）"><a href="#观察网页DOM结构，确定要爬取的数据所在位置（我们爬取左边的新闻列表）" class="headerlink" title="观察网页DOM结构，确定要爬取的数据所在位置（我们爬取左边的新闻列表）"></a>观察网页DOM结构，确定要爬取的数据所在位置（我们爬取左边的新闻列表）</h5><p><img src="/2020/04/08/node-%E7%88%AC%E8%99%AB-%E7%9B%B8%E5%85%B3%E5%8C%85-%E5%9F%BA%E7%A1%80/image-20200409123521700.png" alt="image-20200409123521700"></p>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><h3 id="1-爬取百度新闻"><a href="#1-爬取百度新闻" class="headerlink" title="1.爬取百度新闻"></a>1.爬取<a href="https://news.baidu.com/" target="_blank" rel="noopener">百度新闻</a></h3><h5 id="观察网页DOM结构，确定要爬取的数据所在位置（我们爬取左边的新闻列表）"><a href="#观察网页DOM结构，确定要爬取的数据所在位置（我们爬取左边的新闻列表）" class="headerlink" title="观察网页DOM结构，确定要爬取的数据所在位置（我们爬取左边的新闻列表）"></a>观察网页DOM结构，确定要爬取的数据所在位置（我们爬取左边的新闻列表）</h5><p><img src="/blog/2020/04/08/node-%E7%88%AC%E8%99%AB-%E7%9B%B8%E5%85%B3%E5%8C%85-%E5%9F%BA%E7%A1%80/image-20200409123521700.png" alt="image-20200409123521700"></p>
 <h5 id="引入node包"><a href="#引入node包" class="headerlink" title="引入node包"></a>引入node包</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">"express"</span>)</span><br><span class="line"><span class="keyword">const</span> superagent = <span class="built_in">require</span>(<span class="string">"superagent"</span>)</span><br><span class="line"><span class="keyword">const</span> cheerio = <span class="built_in">require</span>(<span class="string">"cheerio"</span>)</span><br><span class="line"><span class="keyword">const</span> app = express()</span><br></pre></td></tr></table></figure>
 
 <h5 id="请求百度新闻首页，并得到HTML"><a href="#请求百度新闻首页，并得到HTML" class="headerlink" title="请求百度新闻首页，并得到HTML"></a>请求百度新闻首页，并得到HTML</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> hotNews = []; </span><br><span class="line"></span><br><span class="line">superagent.get(<span class="string">'http://news.baidu.com/'</span>).end(<span class="function">(<span class="params">err, res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">`新闻抓取失败 - <span class="subst">$&#123;err&#125;</span>`</span>)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        hotNews = getHotNews(res)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getHotNews</span>(<span class="params">res</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> hotNews = [];</span><br><span class="line">    <span class="comment">// 访问成功，请求http://news.baidu.com/页面所返回的数据会包含在res.text中。</span></span><br><span class="line">    <span class="comment">/* 使用cheerio模块的cherrio.load()方法，将HTMLdocument作为参数传入函数</span></span><br><span class="line"><span class="comment">       以后就可以使用类似jQuery的$(selectior)的方式来获取页面元素</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">let</span> $ = cheerio.load(res.text);</span><br><span class="line">    <span class="comment">// 找到目标数据所在的页面元素，获取数据</span></span><br><span class="line">    $(<span class="string">'div#pane-news ul li a'</span>).each(<span class="function">(<span class="params">idx, ele</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// cherrio中$('selector').each()用来遍历所有匹配到的DOM元素</span></span><br><span class="line">        <span class="comment">// 参数idx是当前遍历的元素的索引，ele就是当前便利的DOM元素</span></span><br><span class="line">        <span class="keyword">let</span> news = &#123;</span><br><span class="line">            title: $(ele).text(), <span class="comment">// 获取新闻标题</span></span><br><span class="line">            href: $(ele).attr(<span class="string">'href'</span>) <span class="comment">// 获取新闻网页链接</span></span><br><span class="line">        &#125;;</span><br><span class="line">        hotNews.push(news) <span class="comment">// 存入最终结果数组</span></span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">return</span> hotNews</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h5 id="将数据显示在9000端口"><a href="#将数据显示在9000端口" class="headerlink" title="将数据显示在9000端口"></a>将数据显示在9000端口</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">'/'</span>, (req, res, next) =&gt; &#123;</span><br><span class="line">    res.send(hotNews)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> server = app.listen(<span class="number">9000</span>, () =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"祝你好运..."</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-<h5 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h5><p><img src="/2020/04/08/node-%E7%88%AC%E8%99%AB-%E7%9B%B8%E5%85%B3%E5%8C%85-%E5%9F%BA%E7%A1%80/image-20200409123650464.png" alt="image-20200409123650464"></p>
-<h3 id="2-爬取B站评论区"><a href="#2-爬取B站评论区" class="headerlink" title="2.爬取B站评论区"></a>2.爬取B站评论区</h3><h5 id="观察网页结构，确定数据位置"><a href="#观察网页结构，确定数据位置" class="headerlink" title="观察网页结构，确定数据位置"></a>观察网页结构，确定数据位置</h5><p><img src="/2020/04/08/node-%E7%88%AC%E8%99%AB-%E7%9B%B8%E5%85%B3%E5%8C%85-%E5%9F%BA%E7%A1%80/image-20200409124345108.png" alt="image-20200409124345108"></p>
+<h5 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h5><p><img src="/blog/2020/04/08/node-%E7%88%AC%E8%99%AB-%E7%9B%B8%E5%85%B3%E5%8C%85-%E5%9F%BA%E7%A1%80/image-20200409123650464.png" alt="image-20200409123650464"></p>
+<h3 id="2-爬取B站评论区"><a href="#2-爬取B站评论区" class="headerlink" title="2.爬取B站评论区"></a>2.爬取B站评论区</h3><h5 id="观察网页结构，确定数据位置"><a href="#观察网页结构，确定数据位置" class="headerlink" title="观察网页结构，确定数据位置"></a>观察网页结构，确定数据位置</h5><p><img src="/blog/2020/04/08/node-%E7%88%AC%E8%99%AB-%E7%9B%B8%E5%85%B3%E5%8C%85-%E5%9F%BA%E7%A1%80/image-20200409124345108.png" alt="image-20200409124345108"></p>
 <blockquote>
 <p>经过观察和实践，B站评论区采用的是动态加载，所以使用superagent是不行的，这次我们使用nightmare+cheerio</p>
 </blockquote>
 <h5 id="代码（省略上个例子的分步步骤）"><a href="#代码（省略上个例子的分步步骤）" class="headerlink" title="代码（省略上个例子的分步步骤）"></a>代码（省略上个例子的分步步骤）</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">const express &#x3D; require(&quot;express&quot;)</span><br><span class="line">const app &#x3D; express()</span><br><span class="line">&#x2F;&#x2F; const superagent &#x3D; require(&quot;superagent&quot;)</span><br><span class="line">const cheerio &#x3D; require(&quot;cheerio&quot;)</span><br><span class="line">const Nightmare &#x3D; require(&#39;nightmare&#39;); &#x2F;&#x2F; 自动化测试包，处理动态页面</span><br><span class="line">const nightmare &#x3D; Nightmare(&#123;</span><br><span class="line">    show: true,</span><br><span class="line">    waitTimeout: 70000</span><br><span class="line">&#125;); &#x2F;&#x2F; show:true  显示内置模拟浏览器</span><br><span class="line"></span><br><span class="line">let NAMES &#x3D; []</span><br><span class="line">let test &#x3D; &quot;&quot;</span><br><span class="line"></span><br><span class="line">main()</span><br><span class="line"></span><br><span class="line">function main() &#123;</span><br><span class="line">    load(&quot;https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1qk4y197tE&quot;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function load(url) &#123;</span><br><span class="line">    nightmare</span><br><span class="line">        .goto(url)</span><br><span class="line">        .wait(&quot;div.list-item.reply-wrap&quot;)</span><br><span class="line">        .evaluate(() &#x3D;&gt; document.querySelector(&quot;div.comment-list&quot;).innerHTML)</span><br><span class="line">        .then(htmlStr &#x3D;&gt; &#123;</span><br><span class="line">            NAMES &#x3D; getName(htmlStr)</span><br><span class="line">            &#x2F;&#x2F;test &#x3D; htmlStr</span><br><span class="line">        &#125;)</span><br><span class="line">        .catch(error &#x3D;&gt; &#123;</span><br><span class="line">            console.log(&#96;抓取失败 - $&#123;error&#125;&#96;);</span><br><span class="line">        &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function getName(res) &#123;</span><br><span class="line">    let names &#x3D; []</span><br><span class="line">    let $ &#x3D; cheerio.load(res)</span><br><span class="line">    $(&#39;div.list-item.reply-wrap .con .user a[class ^&#x3D;&quot;name &quot;]&#39;).each((idx, ele) &#x3D;&gt; &#123;</span><br><span class="line">        let name &#x3D; $(ele).text()</span><br><span class="line">        if (names.indexOf(name) &gt; -1) &#123;&#x2F;&#x2F;判断是否已经有该用户名在数组中</span><br><span class="line">            console.log(&quot;skip..&quot;)</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            names.push(name)</span><br><span class="line">            console.log(idx + &quot;---&quot; + name)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    return names</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">app.get(&#39;&#x2F;&#39;, (req, res, next) &#x3D;&gt; &#123;</span><br><span class="line">    res.send(NAMES)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">var server &#x3D; app.listen(9000, () &#x3D;&gt; &#123;</span><br><span class="line">    console.log(&quot;祝你好运...&quot;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-<h5 id="结果-1"><a href="#结果-1" class="headerlink" title="结果"></a>结果</h5><p><img src="/2020/04/08/node-%E7%88%AC%E8%99%AB-%E7%9B%B8%E5%85%B3%E5%8C%85-%E5%9F%BA%E7%A1%80/image-20200409124835540.png" alt="image-20200409124835540"></p>
+<h5 id="结果-1"><a href="#结果-1" class="headerlink" title="结果"></a>结果</h5><p><img src="/blog/2020/04/08/node-%E7%88%AC%E8%99%AB-%E7%9B%B8%E5%85%B3%E5%8C%85-%E5%9F%BA%E7%A1%80/image-20200409124835540.png" alt="image-20200409124835540"></p>
 <h3 id="3-优化"><a href="#3-优化" class="headerlink" title="3.优化"></a>3.优化</h3><blockquote>
 <p>上面的实例2智能得到一页的数据，通常我们需要一个视频下所有的评论数据，用上面的代码2就比较麻烦</p>
 <p>所以我们应该让它自动点击下一页直到最后一页自动爬取</p>
 <p>因为前面已经提到cheerio不能操作DOM事件，只能使用nightmare自带的浏览器DOM操作来实现了</p>
 <p>同时，这次我们用Excel存储数据，并提供下载接口</p>
 </blockquote>
-<h5 id="优化点"><a href="#优化点" class="headerlink" title="优化点"></a>优化点</h5><p><img src="/2020/04/08/node-%E7%88%AC%E8%99%AB-%E7%9B%B8%E5%85%B3%E5%8C%85-%E5%9F%BA%E7%A1%80/image-20200409125516328.png" alt="image-20200409125516328"></p>
+<h5 id="优化点"><a href="#优化点" class="headerlink" title="优化点"></a>优化点</h5><p><img src="/blog/2020/04/08/node-%E7%88%AC%E8%99%AB-%E7%9B%B8%E5%85%B3%E5%8C%85-%E5%9F%BA%E7%A1%80/image-20200409125516328.png" alt="image-20200409125516328"></p>
 <h5 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">"express"</span>)</span><br><span class="line"><span class="keyword">const</span> app = express()</span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">"fs"</span>)</span><br><span class="line"><span class="keyword">const</span> nodeExcel = <span class="built_in">require</span>(<span class="string">'excel-export'</span>)</span><br><span class="line"><span class="keyword">const</span> Nightmare = <span class="built_in">require</span>(<span class="string">'nightmare'</span>); <span class="comment">// 自动化测试包，处理动态页面</span></span><br><span class="line"><span class="keyword">const</span> nightmare = Nightmare(&#123;</span><br><span class="line">    show: <span class="literal">true</span>,</span><br><span class="line">    waitTimeout: <span class="number">10000000</span></span><br><span class="line">&#125;); <span class="comment">// show:true  显示内置模拟浏览器</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> NAMES = []</span><br><span class="line"></span><br><span class="line">NAMES = nightmare</span><br><span class="line">    .goto(<span class="string">'https://www.bilibili.com/video/BV1cx411s7db'</span>)</span><br><span class="line">    .wait(<span class="string">"div.list-item.reply-wrap"</span>)</span><br><span class="line">    .wait(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">window</span>.names = []</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;)</span><br><span class="line">    .wait(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">//如果发现展开楼中楼标签，自动展开</span></span><br><span class="line">        <span class="keyword">var</span> view_more_button = <span class="built_in">document</span>.querySelectorAll(<span class="string">".list-item.reply-wrap .con .reply-box .view-more a[class='btn-more']"</span>)</span><br><span class="line">        <span class="keyword">if</span> (view_more_button) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; view_more_button.length; i++) &#123;</span><br><span class="line">                view_more_button[i].click();</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="comment">//得到用户名</span></span><br><span class="line">        <span class="keyword">var</span> list = <span class="built_in">document</span>.querySelectorAll(<span class="string">'.list-item.reply-wrap .con .user a[class ^="name "]'</span>)</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; list.length; i++) &#123;</span><br><span class="line">            <span class="keyword">let</span> name = list[i].text</span><br><span class="line">            <span class="keyword">if</span> (names.indexOf(name) &gt; <span class="number">-1</span>) &#123;</span><br><span class="line">                <span class="built_in">console</span>.log(<span class="string">"skip.."</span>)</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                names.push(name)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="comment">//如果有下一页按钮，自动点击</span></span><br><span class="line">        <span class="keyword">var</span> next_page_button = <span class="built_in">document</span>.querySelector(<span class="string">".bottom-page.paging-box-big a[class = 'next']"</span>);</span><br><span class="line">        <span class="keyword">if</span> (next_page_button) &#123;</span><br><span class="line">            next_page_button.click();</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">    &#125;)</span><br><span class="line">    .evaluate(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> names</span><br><span class="line">    &#125;)</span><br><span class="line">    .end()</span><br><span class="line">    .then(<span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">        NAMES = res</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"over!"</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">    .catch(<span class="function"><span class="params">error</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">`抓取失败 - <span class="subst">$&#123;error&#125;</span>`</span>)</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">app.get(<span class="string">'/'</span>, (req, res, next) =&gt; &#123;</span><br><span class="line">    res.send(NAMES)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">'/e'</span>, (req, res, next) =&gt; &#123;</span><br><span class="line">    <span class="keyword">var</span> conf = &#123;&#125;;</span><br><span class="line">    conf.name = <span class="string">"mysheet"</span>;</span><br><span class="line">    conf.cols = [&#123;</span><br><span class="line">        caption: <span class="string">'昵称'</span>,</span><br><span class="line">        type: <span class="string">'string'</span>,</span><br><span class="line">    &#125;]</span><br><span class="line">    conf.rows = []</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; NAMES.length; i++) &#123;</span><br><span class="line">        conf.rows.push([</span><br><span class="line">            NAMES[i]</span><br><span class="line">        ])</span><br><span class="line">        <span class="built_in">console</span>.log(i + <span class="number">1</span> + <span class="string">'---'</span> + NAMES[i])</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> result = nodeExcel.execute(conf);</span><br><span class="line">    res.setHeader(<span class="string">'Content-Type'</span>, <span class="string">'application/vnd.openxmlformats'</span>);</span><br><span class="line">    res.setHeader(<span class="string">"Content-Disposition"</span>, <span class="string">"attachment; filename="</span> + <span class="string">"Report.xlsx"</span>);</span><br><span class="line">    res.end(result, <span class="string">'binary'</span>);</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">var</span> server = app.listen(<span class="number">9000</span>, () =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"祝你好运..."</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <p>结果（网页显示和Excel表）</p>
-<p><img src="/2020/04/08/node-%E7%88%AC%E8%99%AB-%E7%9B%B8%E5%85%B3%E5%8C%85-%E5%9F%BA%E7%A1%80/image-20200409130306698.png" alt="image-20200409130306698"></p>
-<p><img src="/2020/04/08/node-%E7%88%AC%E8%99%AB-%E7%9B%B8%E5%85%B3%E5%8C%85-%E5%9F%BA%E7%A1%80/image-20200409130537240.png" alt="image-20200409130537240"></p>
+<p><img src="/blog/2020/04/08/node-%E7%88%AC%E8%99%AB-%E7%9B%B8%E5%85%B3%E5%8C%85-%E5%9F%BA%E7%A1%80/image-20200409130306698.png" alt="image-20200409130306698"></p>
+<p><img src="/blog/2020/04/08/node-%E7%88%AC%E8%99%AB-%E7%9B%B8%E5%85%B3%E5%8C%85-%E5%9F%BA%E7%A1%80/image-20200409130537240.png" alt="image-20200409130537240"></p>
 <h5 id="bugs"><a href="#bugs" class="headerlink" title="bugs"></a>bugs</h5><p>1.爬取过程不稳定，有闪退的情况</p>
 <p>2.数据有缺失减少的情况（可能和展开楼中楼有关，待改进）</p>
 <h2 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h2><p>利用好爬虫可以做很多有意义的事，如果需要从网页上得到大量排列好的数据，用爬虫是非常方便的。</p>
@@ -323,14 +323,14 @@
 
 <h2 id="离线下载包"><a href="#离线下载包" class="headerlink" title="离线下载包"></a>离线下载包</h2><p>其实使用go get 命令也是从git clone下来框架包，所以可以手动clone gin框架包，然后使用git install安装在自己的项目中，由于步骤稍微麻烦一点，我直接将gin包上传到<a href="https://pan.baidu.com/s/1yEMK7QBYGUQiiTKH7q4X4A" target="_blank" rel="noopener">百度网盘</a>，提取码：4fr3</p>
 <p>下载之后直接将文件夹中的两个包放到项目路径下的src目录中即可</p>
-<p><img src="/2020/03/31/go-%E8%AF%AD%E8%A8%80-gin%E6%A1%86%E6%9E%B6%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/image-20200331101309978.png" alt="image-20200331101309978"></p>
+<p><img src="/blog/2020/03/31/go-%E8%AF%AD%E8%A8%80-gin%E6%A1%86%E6%9E%B6%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/image-20200331101309978.png" alt="image-20200331101309978"></p>
 <h2 id="运行测试"><a href="#运行测试" class="headerlink" title="运行测试"></a>运行测试</h2><p>新建一个main.go 测试程序,并使用go run main.go运行</p>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">"github.com/gin-gonic/gin"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	r := gin.Default()</span><br><span class="line">	r.GET(<span class="string">"/"</span>, <span class="function"><span class="keyword">func</span><span class="params">(c *gin.Context)</span></span> &#123;</span><br><span class="line">		c.JSON(<span class="number">200</span>, gin.H&#123;</span><br><span class="line">			<span class="string">"message"</span>: <span class="string">"Hello!!"</span>,</span><br><span class="line">		&#125;)</span><br><span class="line">	&#125;)</span><br><span class="line">    r.Run(<span class="string">"localhost:7777"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>运行提示像下面这样表示成功开启go服务器</p>
-<p><img src="/2020/03/31/go-%E8%AF%AD%E8%A8%80-gin%E6%A1%86%E6%9E%B6%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/image-20200331101824995.png" alt="image-20200331101824995"></p>
+<p><img src="/blog/2020/03/31/go-%E8%AF%AD%E8%A8%80-gin%E6%A1%86%E6%9E%B6%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/image-20200331101824995.png" alt="image-20200331101824995"></p>
 <p>打开网页查看</p>
-<p><img src="/2020/03/31/go-%E8%AF%AD%E8%A8%80-gin%E6%A1%86%E6%9E%B6%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/image-20200331101912909.png" alt="image-20200331101912909"></p>
+<p><img src="/blog/2020/03/31/go-%E8%AF%AD%E8%A8%80-gin%E6%A1%86%E6%9E%B6%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/image-20200331101912909.png" alt="image-20200331101912909"></p>
 <h2 id="注"><a href="#注" class="headerlink" title="注"></a>注</h2><p>由于gin版本提升，可能博客中的gin包会有不能使用的情况，<strong>请访问<a href="https://gin-gonic.com/zh-cn/docs/" target="_blank" rel="noopener">Gin官网</a></strong></p>
 
       
@@ -615,36 +615,36 @@
         <blockquote>
 <p>博客前提是安装并且配置好了GIT</p>
 </blockquote>
-<h2 id="新建项目仓库"><a href="#新建项目仓库" class="headerlink" title="新建项目仓库"></a>新建项目仓库</h2><p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303122041106.png" alt="image-20200303122041106"></p>
+<h2 id="新建项目仓库"><a href="#新建项目仓库" class="headerlink" title="新建项目仓库"></a>新建项目仓库</h2><p><img src="/blog/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303122041106.png" alt="image-20200303122041106"></p>
 <blockquote>
 <p>新建一个放项目文件的仓库</p>
 </blockquote>
-<h2 id="在本地新建一个安卓项目P1"><a href="#在本地新建一个安卓项目P1" class="headerlink" title="在本地新建一个安卓项目P1"></a>在本地新建一个安卓项目P1</h2><p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123211672.png" alt="image-20200303123211672"></p>
-<h4 id="配置远程GIT"><a href="#配置远程GIT" class="headerlink" title="配置远程GIT"></a>配置远程GIT</h4><p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123255462.png" alt="image-20200303123255462"></p>
-<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123311358.png" alt="image-20200303123311358"></p>
-<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123715881.png" alt="image-20200303123715881"></p>
-<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123835376.png" alt="image-20200303123835376"></p>
+<h2 id="在本地新建一个安卓项目P1"><a href="#在本地新建一个安卓项目P1" class="headerlink" title="在本地新建一个安卓项目P1"></a>在本地新建一个安卓项目P1</h2><p><img src="/blog/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123211672.png" alt="image-20200303123211672"></p>
+<h4 id="配置远程GIT"><a href="#配置远程GIT" class="headerlink" title="配置远程GIT"></a>配置远程GIT</h4><p><img src="/blog/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123255462.png" alt="image-20200303123255462"></p>
+<p><img src="/blog/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123311358.png" alt="image-20200303123311358"></p>
+<p><img src="/blog/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123715881.png" alt="image-20200303123715881"></p>
+<p><img src="/blog/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123835376.png" alt="image-20200303123835376"></p>
 <blockquote>
 <p>将github仓库地址复制到这里</p>
 </blockquote>
-<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123910054.png" alt="image-20200303123910054"></p>
+<p><img src="/blog/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123910054.png" alt="image-20200303123910054"></p>
 <blockquote>
 <p>先将项目文件提交到github，点击Commit选择要上传的文件</p>
 </blockquote>
-<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123958747.png" alt="image-20200303123958747"></p>
+<p><img src="/blog/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303123958747.png" alt="image-20200303123958747"></p>
 <blockquote>
 <p>第一次将所有的文件，包括配置文件都上传上去</p>
 </blockquote>
-<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303124112102.png" alt="image-20200303124112102"></p>
+<p><img src="/blog/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303124112102.png" alt="image-20200303124112102"></p>
 <blockquote>
 <p>忽略警告</p>
 </blockquote>
-<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303124257588.png" alt="image-20200303124257588"></p>
-<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303124323586.png" alt="image-20200303124323586"></p>
+<p><img src="/blog/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303124257588.png" alt="image-20200303124257588"></p>
+<p><img src="/blog/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303124323586.png" alt="image-20200303124323586"></p>
 <blockquote>
 <p>选择push，将文件推到github上</p>
 </blockquote>
-<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303124423163.png" alt="image-20200303124423163"></p>
+<p><img src="/blog/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303124423163.png" alt="image-20200303124423163"></p>
 <blockquote>
 <p>去github查看，已经可以上传成功，到这里已经全部完成了</p>
 </blockquote>
@@ -652,13 +652,13 @@
 <p>上面已经将仓库建好了，其他开发者只需要从github拉取项目到本地就可以了</p>
 <p>修改了代码之后，只需要像上面一样，先选择要Commit的文件（也就是改了代码的文件或新增的文件），再push到远端仓库就可以了，其他用户再次开发的时候点击pull拉取下来，就可以继续开发了</p>
 </blockquote>
-<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303124506727.png" alt="image-20200303124506727"></p>
-<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303124608343.png" alt="image-20200303124608343"></p>
+<p><img src="/blog/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303124506727.png" alt="image-20200303124506727"></p>
+<p><img src="/blog/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303124608343.png" alt="image-20200303124608343"></p>
 <blockquote>
 <p>第一次创建新项目像上面这样</p>
 <p>之后打开此项目，先将最新版的代码拉取下来就行了</p>
 </blockquote>
-<p><img src="/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303125930499.png" alt="image-20200303125930499"></p>
+<p><img src="/blog/2020/03/03/Android-studio-%E4%BD%BF%E7%94%A8git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/image-20200303125930499.png" alt="image-20200303125930499"></p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>多人协同开发，使用GIT是非常有用的，他能将不同用户上传或修改的代码合并，不用每次编写代码的时候都先复制其他开发者的代码到本地。</p>
 <p>每次编写完代码之后直接提交到远端仓库，git会自动进行项目代码管理，其他开发者要编写代码只需要拉取下来就可以在最新版代码的基础上继续编写了。</p>
 
@@ -758,7 +758,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">implementation <span class="string">'com.alibaba:fastjson:1.2.9'</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="请求一段JSON字符串"><a href="#请求一段JSON字符串" class="headerlink" title="请求一段JSON字符串"></a>请求一段JSON字符串</h4><p>使用上面的volley，请求一段JSON数据，这是<a href="https://jsonplaceholder.typicode.com/posts/1" target="_blank" rel="noopener">请求地址</a>。</p>
-<p><img src="/2020/02/27/%E5%AE%89%E5%8D%93%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8EJSON%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%BD%AC%E5%8C%96/image-20200227230947382.png" alt="image-20200227230947382"></p>
+<p><img src="/blog/2020/02/27/%E5%AE%89%E5%8D%93%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8EJSON%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%BD%AC%E5%8C%96/image-20200227230947382.png" alt="image-20200227230947382"></p>
 <h4 id="转化"><a href="#转化" class="headerlink" title="转化"></a>转化</h4><p>请求的JSON数据会自动转化成JSON字符串</p>
 <h6 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import com.alibaba.fastjson.JSONObject;</span><br></pre></td></tr></table></figure>
 
@@ -769,7 +769,7 @@
 
 <p>在之前，我已经创建了一个空白TextView组件，将转换之后的数据展示在上面，检验是否成功将字符串转化成JSON对象，通过key检验是否得到对应的值</p>
 <h4 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h4><p>成功将body展示到界面上</p>
-<img src="/2020/02/27/%E5%AE%89%E5%8D%93%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8EJSON%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%BD%AC%E5%8C%96/QQ图片20200227230806.jpg" style="zoom:25%;">
+<img src="/blog/2020/02/27/%E5%AE%89%E5%8D%93%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8EJSON%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%BD%AC%E5%8C%96/QQ图片20200227230806.jpg" style="zoom:25%;">
 
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>发送HTTP请求和JOSN数据的处理是和后台数据交互的关键</p>
 
@@ -855,13 +855,13 @@
 <p>因此这里介绍一个好用的库来满足设计需求</p>
 </blockquote>
 <h3 id="下载库文件"><a href="#下载库文件" class="headerlink" title="下载库文件"></a>下载库文件</h3><p><a href="https://github.com/bumptech/glide/releases/download/v4.7.0/glide-full-4.7.0.jar" target="_blank" rel="noopener">点击这里</a>下载库文件，将下载好的文件复制到项目中具体module/lib文件夹下面，如下图所示（需要将项目设为project显示模式）</p>
-<p><img src="/2020/02/25/%E5%8E%9F%E7%94%9F%E5%AE%89%E5%8D%93%E4%BD%BF%E7%94%A8URL%E5%8A%A0%E8%BD%BD%E5%9B%BE%E7%89%87/image-20200226001214360.png" alt="image-20200226001214360"></p>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h5 id="在布局文件XML中创建一个ImageView组件"><a href="#在布局文件XML中创建一个ImageView组件" class="headerlink" title="在布局文件XML中创建一个ImageView组件"></a>在布局文件XML中创建一个ImageView组件</h5><p><img src="/2020/02/25/%E5%8E%9F%E7%94%9F%E5%AE%89%E5%8D%93%E4%BD%BF%E7%94%A8URL%E5%8A%A0%E8%BD%BD%E5%9B%BE%E7%89%87/image-20200226001613613.png" alt="image-20200226001613613"></p>
-<h5 id="java代码中先引入包"><a href="#java代码中先引入包" class="headerlink" title="java代码中先引入包"></a>java代码中先引入包</h5><p><img src="/2020/02/25/%E5%8E%9F%E7%94%9F%E5%AE%89%E5%8D%93%E4%BD%BF%E7%94%A8URL%E5%8A%A0%E8%BD%BD%E5%9B%BE%E7%89%87/image-20200226001421437.png" alt="image-20200226001421437"></p>
+<p><img src="/blog/2020/02/25/%E5%8E%9F%E7%94%9F%E5%AE%89%E5%8D%93%E4%BD%BF%E7%94%A8URL%E5%8A%A0%E8%BD%BD%E5%9B%BE%E7%89%87/image-20200226001214360.png" alt="image-20200226001214360"></p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h5 id="在布局文件XML中创建一个ImageView组件"><a href="#在布局文件XML中创建一个ImageView组件" class="headerlink" title="在布局文件XML中创建一个ImageView组件"></a>在布局文件XML中创建一个ImageView组件</h5><p><img src="/blog/2020/02/25/%E5%8E%9F%E7%94%9F%E5%AE%89%E5%8D%93%E4%BD%BF%E7%94%A8URL%E5%8A%A0%E8%BD%BD%E5%9B%BE%E7%89%87/image-20200226001613613.png" alt="image-20200226001613613"></p>
+<h5 id="java代码中先引入包"><a href="#java代码中先引入包" class="headerlink" title="java代码中先引入包"></a>java代码中先引入包</h5><p><img src="/blog/2020/02/25/%E5%8E%9F%E7%94%9F%E5%AE%89%E5%8D%93%E4%BD%BF%E7%94%A8URL%E5%8A%A0%E8%BD%BD%E5%9B%BE%E7%89%87/image-20200226001421437.png" alt="image-20200226001421437"></p>
 <h5 id="使用库中提供的方法"><a href="#使用库中提供的方法" class="headerlink" title="使用库中提供的方法"></a>使用库中提供的方法</h5><p>先通过id实例化ImageView组件，然后使用Glide.with(this).load(“对应URL”).into(对应组件)</p>
-<p><img src="/2020/02/25/%E5%8E%9F%E7%94%9F%E5%AE%89%E5%8D%93%E4%BD%BF%E7%94%A8URL%E5%8A%A0%E8%BD%BD%E5%9B%BE%E7%89%87/image-20200226001817398.png" alt="image-20200226001817398"></p>
+<p><img src="/blog/2020/02/25/%E5%8E%9F%E7%94%9F%E5%AE%89%E5%8D%93%E4%BD%BF%E7%94%A8URL%E5%8A%A0%E8%BD%BD%E5%9B%BE%E7%89%87/image-20200226001817398.png" alt="image-20200226001817398"></p>
 <h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>手机调试运行结果</p>
-<img src="/2020/02/25/%E5%8E%9F%E7%94%9F%E5%AE%89%E5%8D%93%E4%BD%BF%E7%94%A8URL%E5%8A%A0%E8%BD%BD%E5%9B%BE%E7%89%87/Screenshot_20200226-002146.jpg" alt="Screenshot_20200226-002146.jpg" style="zoom: 25%;">
+<img src="/blog/2020/02/25/%E5%8E%9F%E7%94%9F%E5%AE%89%E5%8D%93%E4%BD%BF%E7%94%A8URL%E5%8A%A0%E8%BD%BD%E5%9B%BE%E7%89%87/Screenshot_20200226-002146.jpg" alt="Screenshot_20200226-002146.jpg" style="zoom: 25%;">
 
 <p>这样就成功让ImageView使用URL展示图片啦</p>
 
@@ -941,56 +941,56 @@
         <h2 id="安装Android-studio"><a href="#安装Android-studio" class="headerlink" title="安装Android studio"></a>安装Android studio</h2><ul>
 <li>下载Android studio 安装包，<a href="https://developer.android.google.cn/studio/" target="_blank" rel="noopener">点击这里</a>，最好使用迅雷下载，速度会很快，如果使用浏览器下载网速特别慢，可能会下载失败</li>
 </ul>
-<p><img src="/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223120729021.png" alt="image-20200223120729021"></p>
+<p><img src="/blog/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223120729021.png" alt="image-20200223120729021"></p>
 <ul>
 <li><h6 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h6><blockquote>
 <p>安装之前先创建一个Android_studio文件夹，在该文件夹下创建SDK、studio、work文件夹</p>
 </blockquote>
 </li>
 </ul>
-<p><img src="/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223121343207.png" alt="image-20200223121343207"></p>
+<p><img src="/blog/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223121343207.png" alt="image-20200223121343207"></p>
 <blockquote>
 <p>点击下载好的安装包</p>
 </blockquote>
-<p><img src="/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223121441910.png" alt="image-20200223121441910"></p>
+<p><img src="/blog/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223121441910.png" alt="image-20200223121441910"></p>
 <blockquote>
 <p>下一步</p>
 </blockquote>
-<p><img src="/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223121748222.png" alt="image-20200223121748222"></p>
+<p><img src="/blog/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223121748222.png" alt="image-20200223121748222"></p>
 <blockquote>
 <p>全部勾选，下一步</p>
 </blockquote>
-<p><img src="/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223121825096.png" alt="image-20200223121825096"></p>
+<p><img src="/blog/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223121825096.png" alt="image-20200223121825096"></p>
 <blockquote>
 <p>选择安装地址为创建好的Android_studio/studio文件夹下</p>
 </blockquote>
-<p><img src="/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223122034119.png" alt="image-20200223122034119"></p>
+<p><img src="/blog/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223122034119.png" alt="image-20200223122034119"></p>
 <blockquote>
 <p>使用默认选项，直接点击安装</p>
 </blockquote>
-<p><img src="/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223122113743.png" alt="image-20200223122113743"></p>
+<p><img src="/blog/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223122113743.png" alt="image-20200223122113743"></p>
 <blockquote>
 <p>安装中</p>
 </blockquote>
-<p><img src="/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223122141454.png" alt="image-20200223122141454"></p>
+<p><img src="/blog/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223122141454.png" alt="image-20200223122141454"></p>
 <blockquote>
 <p>安装完成，点击下一步，点击finish，打开Android studio</p>
 </blockquote>
-<p><img src="/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223122302102.png" alt="image-20200223122302102"></p>
+<p><img src="/blog/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223122302102.png" alt="image-20200223122302102"></p>
 <p>注：第一次打开android  studio 会进行一些配置和安装下载SDK</p>
 <ul>
 <li>选择不导入设置</li>
 </ul>
-<p><img src="/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223123412989.png" alt="image-20200223123412989"></p>
+<p><img src="/blog/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223123412989.png" alt="image-20200223123412989"></p>
 <ul>
 <li><p>启动之后出现弹窗，点CANCEL</p>
-<p><img src="/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223123509556.png" alt="image-20200223123509556"></p>
+<p><img src="/blog/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223123509556.png" alt="image-20200223123509556"></p>
 <ul>
 <li><p>后面是一些简单配置，直到下图的界面</p>
-<p><img src="/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223123748166.png" alt="image-20200223123748166"></p>
+<p><img src="/blog/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223123748166.png" alt="image-20200223123748166"></p>
 <ul>
 <li><p>下载SDK</p>
-<p><img src="/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223123843349.png" alt="image-20200223123843349"></p>
+<p><img src="/blog/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223123843349.png" alt="image-20200223123843349"></p>
 </li>
 </ul>
 </li>
@@ -1000,28 +1000,28 @@
 <blockquote>
 <p>下载完成，进入下面界面，选择创建项目</p>
 </blockquote>
-<p><img src="/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223122706976.png" alt="image-20200223122706976"></p>
+<p><img src="/blog/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223122706976.png" alt="image-20200223122706976"></p>
 <blockquote>
 <p>选择Empty activity，也可以选择其他的，随便，为了后面核验是否创建项目成功，建议选择empty activity</p>
 </blockquote>
-<p><img src="/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223122851345.png" alt="image-20200223122851345"></p>
+<p><img src="/blog/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223122851345.png" alt="image-20200223122851345"></p>
 <blockquote>
 <p>项目语言选择java，保存路径改为Android_studio/work</p>
 </blockquote>
-<p><img src="/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223123035152.png" alt="image-20200223123035152"></p>
+<p><img src="/blog/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223123035152.png" alt="image-20200223123035152"></p>
 <blockquote>
 <p>生成项目</p>
 </blockquote>
-<p><img src="/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223124306115.png" alt="image-20200223124306115"></p>
+<p><img src="/blog/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223124306115.png" alt="image-20200223124306115"></p>
 <ul>
 <li><h5 id="创建项目失败，提示“Gradle-project-sync-failed”"><a href="#创建项目失败，提示“Gradle-project-sync-failed”" class="headerlink" title="创建项目失败，提示“Gradle project sync failed”"></a>创建项目失败，提示“Gradle project sync failed”</h5></li>
 </ul>
 <p>如果创建失败，目录结构不会变化，像这样，还会提示“Gradle project sync failed”</p>
-<p><img src="/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223124708477.png" alt="image-20200223124708477"></p>
+<p><img src="/blog/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223124708477.png" alt="image-20200223124708477"></p>
 <p>这时候打开gradle-wrapper.properties文件，将红圈中的网址复制在浏览器中打开（去掉\），下载gradle包</p>
-<p><img src="/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223125007099.png" alt="image-20200223125007099"></p>
+<p><img src="/blog/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223125007099.png" alt="image-20200223125007099"></p>
 <p>将下载好的压缩包复制到 “.gradle”文件夹下，一般在C盘/User下面，找一找就能找到</p>
-<p><img src="/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223125414470.png" alt="image-20200223125414470"></p>
+<p><img src="/blog/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223125414470.png" alt="image-20200223125414470"></p>
 <p>复制完成之后重启Android studio就行了</p>
 <h2 id="配置中文"><a href="#配置中文" class="headerlink" title="配置中文"></a>配置中文</h2><ul>
 <li><p><a href="https://github.com/pingfangx/jetbrains-in-chinese/blob/master/AndroidStudio/resources_zh_CN_AndroidStudio_3.5_r1.jar" target="_blank" rel="noopener">点击这里</a>，下载中文包</p>
@@ -1029,10 +1029,10 @@
 <li><p>下载完之后将该jar包复制到安装路径下的lib目录中</p>
 </li>
 </ul>
-<p><img src="/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223131537989.png" alt="image-20200223131537989"></p>
+<p><img src="/blog/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223131537989.png" alt="image-20200223131537989"></p>
 <ul>
 <li><p>重启Android studio</p>
-<p><img src="/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223131627729.png" alt="image-20200223131627729"></p>
+<p><img src="/blog/2020/02/23/%E5%AE%89%E8%A3%85Android-studio/image-20200223131627729.png" alt="image-20200223131627729"></p>
 </li>
 <li><p>需要还原，从lib中删除该语言包即可</p>
 </li>
@@ -1117,16 +1117,16 @@
 </blockquote>
 <h2 id="搭建博客项目"><a href="#搭建博客项目" class="headerlink" title="搭建博客项目"></a>搭建博客项目</h2><p>首先先搭建一个初始的博客项目，参考<a href="[https://www.wcpha.club/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/](https://www.wcpha.club/2020/01/26/个人博客搭建-hexo/)">这篇文章</a></p>
 <h2 id="使用typora编辑器"><a href="#使用typora编辑器" class="headerlink" title="使用typora编辑器"></a>使用typora编辑器</h2><p><a href="https://www.typora.io/" target="_blank" rel="noopener">点击这里</a>进入官网下载</p>
-<p><img src="/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/image-20200126194530565.png" alt="image-20200126194530565"></p>
+<p><img src="/blog/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/image-20200126194530565.png" alt="image-20200126194530565"></p>
 <p>下载自己电脑的对应版本，完成安装即可使用</p>
 <p>typora是一个用于编写Markdown文件的专用编辑器，在编辑的时候既可以使用Markdown语法也可以像word一样使用软件自带功能完成页面排版，编写界面就像下面这样，简单好用</p>
-<p><img src="/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/image-20200126194843762.png" alt="image-20200126194843762"></p>
+<p><img src="/blog/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/image-20200126194843762.png" alt="image-20200126194843762"></p>
 <p>如果想学习Markdown语法可以<a href="https://www.runoob.com/markdown/md-tutorial.html" target="_blank" rel="noopener">点击这里</a></p>
 <h2 id="解决图片路径问题"><a href="#解决图片路径问题" class="headerlink" title="解决图片路径问题"></a>解决图片路径问题</h2><blockquote>
 <p>可能大家有时候会遇到这样的情况：在.md文件中插入了图片却在网页中加载不出来</p>
 </blockquote>
 <p>首先找到项目主文件夹下面的_config.yml文件，修改选项post_asset_folder:false，将false改为true</p>
-<p><img src="/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/image-20200126195635496.png" alt="image-20200126195635496"></p>
+<p><img src="/blog/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/image-20200126195635496.png" alt="image-20200126195635496"></p>
 <p>然后使用npm或cnpm下载插件：<strong>hexo-asset-image</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install https:&#x2F;&#x2F;github.com&#x2F;CodeFalling&#x2F;hexo-asset-image --save</span><br></pre></td></tr></table></figure>
 
@@ -1134,15 +1134,15 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;文件名&quot;</span><br></pre></td></tr></table></figure>
 
 <p>创建新的博客文件后，打开放博客文件的文件夹会发现同时生成了同名的文件夹用于存放图片，像下面这样</p>
-<p><img src="/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/image-20200126200252929.png" alt="image-20200126200252929"></p>
+<p><img src="/blog/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/image-20200126200252929.png" alt="image-20200126200252929"></p>
 <p>接下来编写博客的时候只需要将图片放到同名的文件夹下面就可以在.md文件中引用了</p>
 <h2 id="截图路径问题"><a href="#截图路径问题" class="headerlink" title="截图路径问题"></a>截图路径问题</h2><blockquote>
 <p>有的同学会发现一个问题：发博客的时候会大量的使用截屏如QQ截屏，把截下来的图片还要保存到特定的文件夹中，再去引用很麻烦。这时候就可以用typora来解决这个烦恼了</p>
 </blockquote>
 <p>在使用typora编辑博客的时候可以直接将截图粘贴到文档上面，但是要注意的是，没有经过配置的typora会将图片存储到一个固定的位置C:\Users\DELL\AppData\Roaming\Typora\typora-user-images（我的电脑是这里），而不是上面所说的同名文件夹内，要进行下面的设置</p>
-<p><img src="/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/image-20200126201306375.png" alt="image-20200126201306375"></p>
+<p><img src="/blog/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/image-20200126201306375.png" alt="image-20200126201306375"></p>
 <p>选择偏好设置</p>
-<p><img src="/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/image-20200126203352661.png" alt="image-20200126203352661"></p>
+<p><img src="/blog/2020/01/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Typora%E5%86%99-md%E6%96%87%E4%BB%B6-%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98-hexo/image-20200126203352661.png" alt="image-20200126203352661"></p>
 <p>选择图像进行上面的配置</p>
 <p>配置好之后截图粘贴到typora上面，图片就会自动存储到同名的文件夹下面</p>
 <p>这样就可以使用typora编辑博客啦！</p>
@@ -1236,13 +1236,13 @@
 <li>node</li>
 </ul>
 <h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="安装node"><a href="#安装node" class="headerlink" title="安装node"></a>安装node</h3><p>点击<a href="http://nodejs.cn/" target="_blank" rel="noopener">这个</a>首页是这样</p>
-<p><img src="/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/image-20200123204218449.png" alt="image-20200123204218449"></p>
+<p><img src="/blog/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/image-20200123204218449.png" alt="image-20200123204218449"></p>
 <p>进入下载页面选择自己的版本</p>
-<p><img src="/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/image-20200123204303580.png" alt="image-20200123204303580"></p>
+<p><img src="/blog/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/image-20200123204303580.png" alt="image-20200123204303580"></p>
 <p>下载好了之后点击安装包照常安装，安装好了之后打开控制台输入node命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/image-20200123211255456.png" alt="image-20200123211255456"></p>
+<p><img src="/blog/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/image-20200123211255456.png" alt="image-20200123211255456"></p>
 <p>像上面一样显示对应版本号，表示安装完成，安装node同时会自动安装npm</p>
 <h3 id="安装配置git"><a href="#安装配置git" class="headerlink" title="安装配置git"></a>安装配置git</h3><p>参考<a href="https://www.cnblogs.com/wj-1314/p/7993819.html" target="_blank" rel="noopener">这里</a></p>
 <h3 id="下载cnpm"><a href="#下载cnpm" class="headerlink" title="下载cnpm"></a>下载cnpm</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
@@ -1251,33 +1251,33 @@
 <p>安装好之后同样可以使用下面的代码查看</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm -v</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/image-20200124195625126.png" alt="image-20200124195625126"></p>
+<p><img src="/blog/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/image-20200124195625126.png" alt="image-20200124195625126"></p>
 <h3 id="安装hexo-cli"><a href="#安装hexo-cli" class="headerlink" title="安装hexo-cli"></a>安装hexo-cli</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 
 <p>查看版本号</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/image-20200124200200620.png" alt="image-20200124200200620"></p>
+<p><img src="/blog/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/image-20200124200200620.png" alt="image-20200124200200620"></p>
 <h3 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h3><p>创建文件夹blog（文件夹名字任意），并cd进入该文件夹</p>
 <p>创建博客项目</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/image-20200124202653542.png" alt="image-20200124202653542"></p>
+<p><img src="/blog/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/image-20200124202653542.png" alt="image-20200124202653542"></p>
 <p>这时候看一下文件夹下生成了哪些东西</p>
-<p><img src="/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/image-20200124202937664.png" alt="image-20200124202937664"></p>
+<p><img src="/blog/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/image-20200124202937664.png" alt="image-20200124202937664"></p>
 <p>补充安装：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hexo --save</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/image-20200124203533467.png" alt="image-20200124203533467"></p>
+<p><img src="/blog/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/image-20200124203533467.png" alt="image-20200124203533467"></p>
 <p>开启博客服务</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
 
 <p>如果没有运行上面指令显示没有该指令，就安装hexo-server，再执行</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hexo-server</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/image-20200124204940197.png" alt="image-20200124204940197"></p>
+<p><img src="/blog/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/image-20200124204940197.png" alt="image-20200124204940197"></p>
 <p>成功之后如上图，进入<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></p>
-<p><img src="/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/image-20200126094552887.png" alt="image-20200126094552887"></p>
+<p><img src="/blog/2020/01/26/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo/image-20200126094552887.png" alt="image-20200126094552887"></p>
 <p>这样就成功搭建起一个简单的个人博客了</p>
 <p>后面有时间会讲解怎样<strong>将博客页面部署到服务器或者是GitHub</strong>上面，实现非本地访问，以及怎样<strong>编辑发表博客文章和修改博客页面主题</strong></p>
 
@@ -1427,19 +1427,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">gin</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Go语言</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Android</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">gin</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Go语言</a>
               </li>
              
               <li class="article-tag-list-item">

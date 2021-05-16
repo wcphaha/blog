@@ -5,25 +5,25 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="https://wcphaha.github.io">
+  <link rel="dns-prefetch" href="https://wcphaha.github.io/blog">
   <title>安卓发送请求及字符串与JSON对象的转化 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="HTTP请求 首先，引入一个HTTP库 “Volley”，这是谷歌发布的HTTP库，详细信息可以点击这里看  引入volley在项目build.gradle 中的 dependencies 引入依赖 1implementation &#39;com.android.volley:volley:1.1.1&#39;  使用创建一个请求队列对象这里拿到的RequestQueue是一个请求队列对象，它可以缓存所有的HT">
 <meta property="og:type" content="article">
 <meta property="og:title" content="安卓发送请求及字符串与JSON对象的转化">
-<meta property="og:url" content="https://wcphaha.github.io/2020/02/27/%E5%AE%89%E5%8D%93%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8EJSON%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%BD%AC%E5%8C%96/index.html">
+<meta property="og:url" content="https://wcphaha.github.io/blog/2020/02/27/%E5%AE%89%E5%8D%93%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8EJSON%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%BD%AC%E5%8C%96/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="HTTP请求 首先，引入一个HTTP库 “Volley”，这是谷歌发布的HTTP库，详细信息可以点击这里看  引入volley在项目build.gradle 中的 dependencies 引入依赖 1implementation &#39;com.android.volley:volley:1.1.1&#39;  使用创建一个请求队列对象这里拿到的RequestQueue是一个请求队列对象，它可以缓存所有的HT">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://wcphaha.github.io/2020/02/27/%E5%AE%89%E5%8D%93%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8EJSON%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%BD%AC%E5%8C%96/image-20200227230947382.png">
-<meta property="og:image" content="https://wcphaha.github.io/2020/02/27/%E5%AE%89%E5%8D%93%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8EJSON%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%BD%AC%E5%8C%96/QQ%E5%9B%BE%E7%89%8720200227230806.jpg">
+<meta property="og:image" content="https://wcphaha.github.io/blog/2020/02/27/%E5%AE%89%E5%8D%93%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8EJSON%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%BD%AC%E5%8C%96/image-20200227230947382.png">
+<meta property="og:image" content="https://wcphaha.github.io/blog/2020/02/27/%E5%AE%89%E5%8D%93%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8EJSON%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%BD%AC%E5%8C%96/QQ%E5%9B%BE%E7%89%8720200227230806.jpg">
 <meta property="article:published_time" content="2020-02-27T14:30:15.000Z">
 <meta property="article:modified_time" content="2020-02-27T15:15:40.275Z">
 <meta property="article:author" content="Wcphaha">
 <meta property="article:tag" content="Android">
 <meta property="article:tag" content="JOSN">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://wcphaha.github.io/2020/02/27/%E5%AE%89%E5%8D%93%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8EJSON%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%BD%AC%E5%8C%96/image-20200227230947382.png">
+<meta name="twitter:image" content="https://wcphaha.github.io/blog/2020/02/27/%E5%AE%89%E5%8D%93%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8EJSON%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%BD%AC%E5%8C%96/image-20200227230947382.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -204,7 +204,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">implementation <span class="string">'com.alibaba:fastjson:1.2.9'</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="请求一段JSON字符串"><a href="#请求一段JSON字符串" class="headerlink" title="请求一段JSON字符串"></a>请求一段JSON字符串</h4><p>使用上面的volley，请求一段JSON数据，这是<a href="https://jsonplaceholder.typicode.com/posts/1" target="_blank" rel="noopener">请求地址</a>。</p>
-<p><img src="/2020/02/27/%E5%AE%89%E5%8D%93%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8EJSON%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%BD%AC%E5%8C%96/image-20200227230947382.png" alt="image-20200227230947382"></p>
+<p><img src="/blog/2020/02/27/%E5%AE%89%E5%8D%93%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8EJSON%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%BD%AC%E5%8C%96/image-20200227230947382.png" alt="image-20200227230947382"></p>
 <h4 id="转化"><a href="#转化" class="headerlink" title="转化"></a>转化</h4><p>请求的JSON数据会自动转化成JSON字符串</p>
 <h6 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import com.alibaba.fastjson.JSONObject;</span><br></pre></td></tr></table></figure>
 
@@ -215,7 +215,7 @@
 
 <p>在之前，我已经创建了一个空白TextView组件，将转换之后的数据展示在上面，检验是否成功将字符串转化成JSON对象，通过key检验是否得到对应的值</p>
 <h4 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h4><p>成功将body展示到界面上</p>
-<img src="/2020/02/27/%E5%AE%89%E5%8D%93%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8EJSON%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%BD%AC%E5%8C%96/QQ图片20200227230806.jpg" style="zoom:25%;">
+<img src="/blog/2020/02/27/%E5%AE%89%E5%8D%93%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8EJSON%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%BD%AC%E5%8C%96/QQ图片20200227230806.jpg" style="zoom:25%;">
 
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>发送HTTP请求和JOSN数据的处理是和后台数据交互的关键</p>
 
@@ -317,7 +317,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://wcphaha.github.io/2020/02/27/%E5%AE%89%E5%8D%93%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8EJSON%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%BD%AC%E5%8C%96/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://wcphaha.github.io/blog/2020/02/27/%E5%AE%89%E5%8D%93%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8EJSON%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%BD%AC%E5%8C%96/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -497,19 +497,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">gin</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Go语言</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Android</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">gin</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Go语言</a>
               </li>
              
               <li class="article-tag-list-item">
