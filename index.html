@@ -160,6 +160,93 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-数据结构与算法-层次遍历两种使用队列的方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2021/05/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E5%B1%82%E6%AC%A1%E9%81%8D%E5%8E%86%E4%B8%A4%E7%A7%8D%E4%BD%BF%E7%94%A8%E9%98%9F%E5%88%97%E7%9A%84%E6%96%B9%E6%B3%95/">数据结构与算法--二叉树层次遍历两种使用队列的方法</a>
+    </h1>
+  
+
+        
+        <a href="/blog/2021/05/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E5%B1%82%E6%AC%A1%E9%81%8D%E5%8E%86%E4%B8%A4%E7%A7%8D%E4%BD%BF%E7%94%A8%E9%98%9F%E5%88%97%E7%9A%84%E6%96%B9%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2021-05-17T06:16:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>使用二叉树的层次遍历可以解决很多二叉树的问题，层次遍历一般采用队列来实现，在实现的时候可以用两种方法来，一种是使用队列的数据结构，进行入队、出队。另一种是使用数组和队头、对尾下标，通过移动下标来实现队列的功能，下面会使用python代码分别使用两种方法，来实现对二叉树的层次遍历。</p>
+<p><img src="/blog/2021/05/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E5%B1%82%E6%AC%A1%E9%81%8D%E5%8E%86%E4%B8%A4%E7%A7%8D%E4%BD%BF%E7%94%A8%E9%98%9F%E5%88%97%E7%9A%84%E6%96%B9%E6%B3%95/image-20210517164837475.png" alt="image-20210517164837475"></p>
+</blockquote>
+<h2 id="1-使用队列数据结构"><a href="#1-使用队列数据结构" class="headerlink" title="1.使用队列数据结构"></a>1.使用队列数据结构</h2><h3 id="1-1-python中使用列表来表示队列"><a href="#1-1-python中使用列表来表示队列" class="headerlink" title="1.1 python中使用列表来表示队列"></a>1.1 python中使用列表来表示队列</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用插入和删除元素表示入队、出队</span></span><br><span class="line">list.insert(<span class="number">0</span>,item) <span class="comment">#列表表头插入元素</span></span><br><span class="line">list.pop() <span class="comment">#删除列表表尾元素</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="1-2-层次遍历代码"><a href="#1-2-层次遍历代码" class="headerlink" title="1.2 层次遍历代码"></a>1.2 层次遍历代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bTree <span class="keyword">import</span> generator</span><br><span class="line"></span><br><span class="line">root = generator([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">8</span>, <span class="number">4</span>, <span class="literal">None</span>, <span class="number">7</span>, <span class="literal">None</span>, <span class="literal">None</span>, <span class="number">6</span>])</span><br><span class="line"><span class="comment">#generator函数可以通过二叉树的层次序列构造二叉树，并返回根节点</span></span><br><span class="line"><span class="comment">#代码参考：https://github.com/wcphaha/source/blob/master/bTree.py</span></span><br><span class="line">queue = [] <span class="comment">#队列</span></span><br><span class="line">p = root</span><br><span class="line">seq = []</span><br><span class="line">queue.insert(<span class="number">0</span>,p) <span class="comment">#根节点入队</span></span><br><span class="line"><span class="keyword">while</span> queue != []: <span class="comment">#队列不为空</span></span><br><span class="line">    p = queue.pop() <span class="comment">#出队</span></span><br><span class="line">    seq.append(p.val)</span><br><span class="line">    <span class="keyword">if</span> p.left:              <span class="comment">#有左节点，左节点入队</span></span><br><span class="line">        queue.insert(<span class="number">0</span>,p.left)</span><br><span class="line">    <span class="keyword">if</span> p.right:             <span class="comment">#有右节点，右节点入队</span></span><br><span class="line">        queue.insert(<span class="number">0</span>,p.right)</span><br><span class="line">print(seq)</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-使用数组实现队列"><a href="#2-使用数组实现队列" class="headerlink" title="2.使用数组实现队列"></a>2.使用数组实现队列</h2><h3 id="2-1使用数组配合数组下标实现"><a href="#2-1使用数组配合数组下标实现" class="headerlink" title="2.1使用数组配合数组下标实现"></a>2.1使用数组配合数组下标实现</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">queue = [<span class="literal">None</span>] * MaxSize <span class="comment">#创建长度一定的数组</span></span><br><span class="line">front,rear = <span class="number">-1</span>,<span class="number">-1</span> <span class="comment">#front指向队首，rear指向对尾，初始值均为-1</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2遍历代码"><a href="#2-2遍历代码" class="headerlink" title="2.2遍历代码"></a>2.2遍历代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bTree <span class="keyword">import</span> generator</span><br><span class="line"></span><br><span class="line">root = generator([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">8</span>, <span class="number">4</span>, <span class="literal">None</span>, <span class="number">7</span>, <span class="literal">None</span>, <span class="literal">None</span>, <span class="number">6</span>])</span><br><span class="line">queue = [<span class="literal">None</span>]*<span class="number">100</span> <span class="comment">#队列</span></span><br><span class="line">front,rear = <span class="number">-1</span>,<span class="number">-1</span></span><br><span class="line">l = []</span><br><span class="line">p = root</span><br><span class="line"></span><br><span class="line">rear += <span class="number">1</span></span><br><span class="line">queue[rear] = p</span><br><span class="line"><span class="keyword">while</span> front &lt; rear:</span><br><span class="line">    front += <span class="number">1</span></span><br><span class="line">    p = queue[front]</span><br><span class="line">    l.append(p.val)</span><br><span class="line">    <span class="keyword">if</span> p.left:</span><br><span class="line">        rear += <span class="number">1</span></span><br><span class="line">        queue[rear] = p.left</span><br><span class="line">    <span class="keyword">if</span> p.right:</span><br><span class="line">        rear += <span class="number">1</span></span><br><span class="line">        queue[rear] = p.right</span><br><span class="line">print(l)</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-总结"><a href="#3-总结" class="headerlink" title="3.总结"></a>3.总结</h2><p>使用数组＋下标的形式比直接使用队列结构更方便，比如需要判断一颗二叉树的高度，或者需要判断某一个节点的层级时，使用下标可以方便地实现。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">二叉树</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/blog/2021/05/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E5%B1%82%E6%AC%A1%E9%81%8D%E5%8E%86%E4%B8%A4%E7%A7%8D%E4%BD%BF%E7%94%A8%E9%98%9F%E5%88%97%E7%9A%84%E6%96%B9%E6%B3%95/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
     <article id="post-node-爬虫-相关包-基础" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1447,11 +1534,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">JOSN</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">JOSN</a>
+                <a href="javascript:void(0)" class="js-tag color4">二叉树</a>
               </li>
              
               <li class="article-tag-list-item">
